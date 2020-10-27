@@ -1,0 +1,38 @@
+body {
+    background-attachment: #c2c3c3 !important;
+}
+
+.header-site {
+    color: white !important;
+}
+
+.sidebar{
+    background-color: #222c3c;
+    min-width: 18rem;
+    max-width: 250px;
+    min-height: calc(100vh - 56px);
+    transition: all 0.3s;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+.sidebar ul li a{
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #C7CACC;
+    text-decoration: none;
+}
+.sidebar ul li a:hover, .sidebar ul .active a{
+    color: #ECEDEE;
+    background-color: #354358;
+}
+
+.sidebar ul li img#icones {
+    display: inline;
+    position: relative;
+    top: -0.1rem;
+    width: 24px;
+    height: 15px;
+}
+
