@@ -56,3 +56,11 @@ body {
     width: 24px;
     height: 15px;
 }
+
+.icone-acoes-view {
+    display: inline;
+    position: relative;
+    top: -0.1rem;
+    width: 35px !important;
+    height: 30px !important;
+}
