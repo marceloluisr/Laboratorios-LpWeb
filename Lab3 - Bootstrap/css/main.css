@@ -6,7 +6,7 @@ body {
     color: white !important;
 }
 
-.sidebar{
+.sidebar {
     background-color: #222c3c;
     min-width: 18rem;
     max-width: 250px;
@@ -17,13 +17,16 @@ body {
 .sidebar ul {
     list-style: none;
 }
-.sidebar ul li a{
+
+.sidebar ul li a {
     display: block;
     padding: 0.75rem 1rem;
     color: #C7CACC;
     text-decoration: none;
 }
-.sidebar ul li a:hover, .sidebar ul .active a{
+
+.sidebar ul li a:hover,
+.sidebar ul .active a {
     color: #ECEDEE;
     background-color: #354358;
 }
@@ -36,3 +39,20 @@ body {
     height: 15px;
 }
 
+.icone-sm-screen-1 {
+    display: inline;
+    position: relative;
+    right: 0.5rem;
+    top: -0.1rem;
+    width: 24px;
+    height: 15px;
+}
+
+
+.icone-sm-screen-2 {
+    display: inline;
+    position: relative;
+    top: -0.1rem;
+    width: 24px;
+    height: 15px;
+}
