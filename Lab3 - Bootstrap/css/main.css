@@ -64,3 +64,15 @@ body {
     width: 35px !important;
     height: 30px !important;
 }
+
+.num-items-chart {
+    display: inline;
+    position: relative;
+    top: 0.2rem;
+    left: 8rem;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 23%;
+    color: rgb(255, 37, 37);
+    background-color: orange;
+}
