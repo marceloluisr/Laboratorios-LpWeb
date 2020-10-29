@@ -51,7 +51,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div style="position:relative;top:0.1rem; color: white;">
                 <!--<p class="h5">Book.net</p>-->
                 <a href="#"> <img class="icone-sm-screen-1" src="../icones/barra_pesquisa/search-solid-white.svg"></a>
@@ -65,9 +65,11 @@
 
                     <a href="./lista_clientes.html" class="list-group-item list-group-item-action">Lista de clientes</a>
 
-                    <a href="./lista_livros.html" class="list-group-item list-group-item-action active">Lista de livros</a>
+                    <a href="./lista_livros.html" class="list-group-item list-group-item-action active">Lista de
+                        livros</a>
 
-                    <a href="#" class="list-group-item list-group-item-action">Carrinho</a>
+                    <a href="#" class="list-group-item list-group-item-action">Carrinho <span
+                            class="badge badge-secondary badge-warning num-items-chart"><b>5</b></span></a>
 
                     <a href="#" class="list-group-item list-group-item-action">Perfil</a>
 
@@ -86,9 +88,11 @@
                 <li><a href="./lista_clientes.html"> <img id="icones" src="../icones/menu/users-solid.svg"> Lista de
                         clientes</a></li>
 
-                <li class="active"><a href="./lista_livros.html"><img id="icones" src="../icones/menu/book-solid.svg"> Lista de livros</a></li>
+                <li class="active"><a href="./lista_livros.html"><img id="icones" src="../icones/menu/book-solid.svg">
+                        Lista de livros</a></li>
 
-                <li><a href="#"> <img id="icones" src="../icones/menu/shopping-cart-solid.svg"> Carrinho <span class="num-items-chart">3</span></a></li>
+                <li><a href="#"> <img id="icones" src="../icones/menu/shopping-cart-solid.svg"> Carrinho <span
+                            class="badge badge-secondary badge-warning num-items-chart"><b>5</b></span></a></li>
                 <!--
                 <li class="d-lg-none"><a href="#"> <img id="icones" src="../icones/menu/user-solid.svg"> Perfil</a></li>
                 <li class="d-lg-none"><a href="#"> <img id="icones" src="../icones/menu/sign-out-alt-solid.svg">
@@ -112,9 +116,9 @@
 
                     </div>
                 </div>
-                
+
                 <div class="table-responsive">
-                    
+
                     <table class="table table-striped table-hover table-bordered">
                         <thead>
                             <tr>
@@ -122,7 +126,7 @@
                                 <th>Nome</th>
                                 <th class="d-none d-sm-table-cell">Autor</th>
                                 <th class="d-none d-sm-table-cell">Cadastro</th>
-                                <th class="d-none d-sm-table-cell" >Comprado</th>
+                                <th class="d-none d-sm-table-cell">Comprado</th>
                                 <th class="d-none d-sm-table-cell">Alugado</th>
                                 <th class="d-none d-sm-table-cell">Reservado</th>
                                 <th>Ações</th>
@@ -142,10 +146,10 @@
                             </div>
                             <div class="d-flex justify-content-center">
                                 <div class="spinner-border m-2 text-warning" role="status">
-                                  <span class="sr-only">Loading...</span>
+                                    <span class="sr-only">Loading...</span>
                                 </div>
                             </div>
-                            
+
                             <tr>
                                 <td scope="row">1</td>
                                 <td>Dom Casmurro</td>
@@ -168,9 +172,15 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="d-none d-xl-block">
-                                        <a href="visualizar.html"><img title="Visualizar" src="../icones/acoes/eye-solid.svg" class="btn btn-outline-primary btn-sm icone-acoes-view"></a>
-                                        <a href="visualizar.html"><img title="Editar" src="../icones/acoes/pen-solid.svg" class="btn btn-outline-warning btn-sm icone-acoes-view"></a>
-                                        <a href="visualizar.html"><img title="Apagar" src="../icones/acoes/trash-alt-solid.svg" class="btn btn-outline-danger btn-sm icone-acoes-view"></a>
+                                        <a href="visualizar.html"><img title="Visualizar"
+                                                src="../icones/acoes/eye-solid.svg"
+                                                class="btn btn-outline-primary btn-sm icone-acoes-view"></a>
+                                        <a href="visualizar.html"><img title="Editar"
+                                                src="../icones/acoes/pen-solid.svg"
+                                                class="btn btn-outline-warning btn-sm icone-acoes-view"></a>
+                                        <a href="visualizar.html"><img title="Apagar"
+                                                src="../icones/acoes/trash-alt-solid.svg"
+                                                class="btn btn-outline-danger btn-sm icone-acoes-view"></a>
                                     </span>
 
                                     <div class="dropdown d-block d-xl-none">
@@ -187,13 +197,11 @@
                                     </div>
                                 </td>
                             </tr>
-                                 
-                           
-                          
-                           
-
                         </tbody>
                     </table>
+
+                    <button type="button" class="btn btn-success btn-sm">Cadastrar</button>
+
                 </div>
             </div>
         </div>
