@@ -52,11 +52,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div style="position:relative;top:0.1rem; color: white;">
-                <!--<p class="h5">Book.net</p>-->
-                <a href="#"> <img class="icone-sm-screen-1" src="../icones/barra_pesquisa/search-solid-white.svg"></a>
+            <div class="d-flex" style="position:relative;top:0.1rem; color: white;">
 
-                <a href="#"> <img class="icone-sm-screen-2" src="../icones/menu/shopping-cart-solid.svg"></a>
+                <!-- Search bar para telas pequenas -->
+                <span id="barra-pesquisa"></span>
+                <a class="btn" onclick="carregarSearchBar()"> <img class="icone-sm-screen-1"
+                        src="../icones/barra_pesquisa/search-solid-white.svg"></a>
+
+                <a href="#" style="position: relative;top:0.4rem"> <img class="icone-sm-screen-2"
+                        src="../icones/menu/shopping-cart-solid.svg"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -350,6 +354,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
 
+    <script src="../js/index.js"></script>
 
 </body>
 
