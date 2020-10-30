@@ -61,7 +61,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="list-group border border-secondary" id="list-tab" role="tablist">
-                    <a href="#" class="list-group-item list-group-item-action">Dashboard</a>
+                    <a href="./dashboard.html" class="list-group-item list-group-item-action">Dashboard</a>
 
                     <a href="./lista_clientes.html" class="list-group-item list-group-item-action">Lista de clientes</a>
 
@@ -81,7 +81,7 @@
     <div class="d-flex">
         <nav class="sidebar d-none d-lg-block">
             <ul class="list-unstyled">
-                <li><a href="#"> <img id="icones" src="../icones/menu/tachometer-alt-solid.svg"> Dashboard</a></li>
+                <li><a href="./dashboard.html"> <img id="icones" src="../icones/menu/tachometer-alt-solid.svg"> Dashboard</a></li>
 
                 <li><a href="./lista_clientes.html"> <img id="icones" src="../icones/menu/users-solid.svg"> Lista de
                         clientes</a></li>
@@ -126,15 +126,15 @@
             <div class="form-group">
                 <label>Disponivel para:</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio-disponivel"
-                        id="radio-compra" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="radio-disponivel" id="radio-compra"
+                        value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         Compra
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio-disponivel"
-                        id="radio-aluguel" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="radio-disponivel" id="radio-aluguel"
+                        value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         Aluguel
                     </label>
@@ -143,15 +143,15 @@
             <div class="form-group">
                 <label>Origem:</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio-origem"
-                        id="radio-nacional" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="radio-origem" id="radio-nacional" value="option1"
+                        checked>
                     <label class="form-check-label" for="exampleRadios1">
                         Nacional
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio-origem"
-                        id="radio-importado" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="radio-origem" id="radio-importado"
+                        value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         Importado
                     </label>
@@ -163,7 +163,17 @@
                     <input type="number" class="form-control" id="inputEstoque" value="10">
                 </div>
             </div>
+            <br><br>
+
+            <div class="d-flex justify-content-around">
+                <button class="btn-danger btn-sm"><a href="./lista_livros.html"
+                        style="text-decoration: none; color: white;">Cancelar edição</a></button>
+                <button class="btn-success btn-sm">Confirmar edição</button>
+            </div>
+
+
         </form>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

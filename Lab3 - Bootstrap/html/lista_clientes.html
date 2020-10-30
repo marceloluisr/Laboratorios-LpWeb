@@ -65,7 +65,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="list-group border border-secondary" id="list-tab" role="tablist">
-                    <a href="#" class="list-group-item list-group-item-action">Dashboard</a>
+                    <a href="./dashboard.html" class="list-group-item list-group-item-action">Dashboard</a>
 
                     <a href="./lista_clientes.html" class="list-group-item list-group-item-action active">Lista de
                         clientes</a>
@@ -87,7 +87,7 @@
     <div class="d-flex">
         <nav class="sidebar d-none d-lg-block">
             <ul class="list-unstyled">
-                <li><a href="#"> <img id="icones" src="../icones/menu/tachometer-alt-solid.svg"> Dashboard</a></li>
+                <li><a href="./dashboard.html"> <img id="icones" src="../icones/menu/tachometer-alt-solid.svg"> Dashboard</a></li>
 
                 <li class="active"><a href="./lista_clientes.html"> <img id="icones"
                             src="../icones/menu/users-solid.svg"> Lista de
@@ -98,11 +98,6 @@
 
                 <li><a href="#"> <img id="icones" src="../icones/menu/shopping-cart-solid.svg"> Carrinho <span
                             class="badge badge-secondary badge-warning num-items-chart"><b>5</b></span></a></li>
-                <!--
-                <li class="d-lg-none"><a href="#"> <img id="icones" src="../icones/menu/user-solid.svg"> Perfil</a></li>
-                <li class="d-lg-none"><a href="#"> <img id="icones" src="../icones/menu/sign-out-alt-solid.svg">
-                        Sair</a></li>
-                -->
             </ul>
 
         </nav>
@@ -163,18 +158,15 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="d-none d-md-block">
-                                        <a href="visualizar.html"><img title="Visualizar"
+                                        <a href="./visualizar_cliente.html"><img title="Visualizar"
                                                 src="../icones/acoes/eye-solid.svg"
                                                 class="btn btn-outline-primary btn-sm icone-acoes-view"></a>
-                                        <a href="visualizar.html"><img title="Editar"
+                                        <a href="./editar_cliente.html"><img title="Editar"
                                                 src="../icones/acoes/pen-solid.svg"
                                                 class="btn btn-outline-warning btn-sm icone-acoes-view"></a>
-                                        <a href="visualizar.html"><img title="Apagar"
+                                        <a data-toggle="modal" data-target="#exampleModal"><img title="Apagar"
                                                 src="../icones/acoes/trash-alt-solid.svg"
                                                 class="btn btn-outline-danger btn-sm icone-acoes-view"></a>
-
-                                        <!--<a href="editar.html" class="btn btn-outline-warning btn-sm">Editar</a>-->
-                                        <!--<a href="apagar.html" class="btn btn-outline-danger btn-sm">Apagar</a>-->
                                     </span>
                                     <div class="dropdown d-block d-md-none">
                                         <button class="btn btn-primary dropdown-toggle btn-sm" type="button"
@@ -183,9 +175,9 @@
                                             Ações
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="acoesListar">
-                                            <a class="dropdown-item" href="visualizar.html">Visualizar</a>
-                                            <a class="dropdown-item" href="editar.html">Editar</a>
-                                            <a class="dropdown-item" href="apagar.html">Apagar</a>
+                                            <a class="dropdown-item" href="./visualizar_cliente.html">Visualizar</a>
+                                            <a class="dropdown-item" href="./editar_cliente.html">Editar</a>
+                                            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal">Apagar</a>
                                         </div>
                                     </div>
                                 </td>
@@ -216,28 +208,149 @@
                     <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
                         data-target="#modal-form-clientes">Cadastrar</button>
 
-                    <!-- Modal formulario clientes -->
-                    <div class="modal fade" id="modal-form-clientes" tabindex="-1" role="dialog"
-                        aria-labelledby="modal-form-clientes-Title" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle"><span class="h2"
-                                            style="position: relative; left: 1rem;font-weight: bold;">Cadastrar
-                                            cliente</span></h5>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- TODO: SEGISMAR inicia o formulário aqui -->
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-success">Cadastrar</button>
-                                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal formulario clientes -->
+    <div class="modal fade" id="modal-form-clientes" tabindex="-1" role="dialog"
+        aria-labelledby="modal-form-clientes-Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"><span class="h2"
+                            style="position: relative; left: 1rem;font-weight: bold;">Cadastrar
+                            cliente</span></h5>
+                </div>
+                <div class="modal-body">
+                    <form class="form-control-col" style="padding: 1rem;">
+                        <p class="h5 d-none d-lg-block">Dados Pessoais</p>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputNome">Nome Completo</label>
+                                <input type="text" class="form-control" id="inputNome" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputRG">RG</label>
+                                <input type="text" class="form-control" id="inputRG">
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="inputPublicacao">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="inputPublicacao">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContato1">Número para contato</label>
+                            <input type="text" class="form-control" id="inputContato1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContato2">Número para contato 2</label>
+                            <input type="text" class="form-control" id="inputContato2">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                        <p class="h5 d-none d-lg-block">Endereço</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="inputLogradouro">Logradouro:</label>
+                                <input type="text" class="form-control" id="inputLogradouro">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputNumero">Número:</label>
+                                <input type="text" class="form-control" id="inputNumero">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="inputComplemento">Complemento:</label>
+                                <input type="text" class="form-control" id="inputComplemento">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="inputBairro">Bairro:</label>
+                                <input type="text" class="form-control" id="inputBairro">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="inputCidade">Cidade:</label>
+                                <input type="text" class="form-control" id="inputCidade">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="inputEst">Seu estado</label>
+                                <select id="inputEst" class="form-control">
+                                    <option selected>Estados</option>
+                                    <option>AC</option>
+                                    <option>AL</option>
+                                    <option>AM</option>
+                                    <option>AP</option>
+                                    <option>BA</option>
+                                    <option>CE</option>
+                                    <option>DF</option>
+                                    <option>ES</option>
+                                    <option>GO</option>
+                                    <option>MA</option>
+                                    <option>MG</option>
+                                    <option>MT</option>
+                                    <option>MS</option>
+                                    <option>PA</option>
+                                    <option>PB</option>
+                                    <option>PE</option>
+                                    <option>PI</option>
+                                    <option>PR</option>
+                                    <option>RJ</option>
+                                    <option>RO</option>
+                                    <option>RN</option>
+                                    <option>RS</option>
+                                    <option>SC</option>
+                                    <option>SE</option>
+                                    <option>SP</option>
+                                    <option>TO</option>
+                                </select>
+                            </div>
+                            <div class="form-group-col">
+                                <p class="h5 d-none d-lg-block">HomePage Pessoal</p><br>
+
+                                <div class="form-group col-md-9">
+                                    <label for="inputFacebook"><img title="Facebook" class="icone-sm-screen-1"
+                                            src="../icones/redes sociais/facebook-f-brands.svg"></label>
+                                    <input type="text" class="form-control" id="inputFacebook">
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <label for="inputInstagram"><img title="Instagram" class="icone-sm-screen-1"
+                                            src="../icones/redes sociais/instagram-square-brands.svg"></label>
+                                    <input type="text" class="form-control" id="inputInstagram">
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <label for="inputTwitter"><img title="Twiter" class="icone-sm-screen-1"
+                                            src="../icones/redes sociais/twitter-brands.svg"></label>
+                                    <input type="text" class="form-control" id="inputTwitter">
+                                </div>
+                            </div>
 
 
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal apagar cliente -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja apagar?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                    <button type="button" class="btn btn-danger">Sim</button>
                 </div>
             </div>
         </div>

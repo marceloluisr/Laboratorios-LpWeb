@@ -65,26 +65,25 @@ body {
     height: 30px !important;
 }
 
+.icone-carrinho-plus{
+    display: inline;
+    position: relative;
+    top: -0.1rem;
+    width: 10px;
+    height: 15px;
+}
 
 .num-items-chart {
-    /*display: inline;
-    position: relative;
-    top: 0.2rem;
-    left: 8rem;
-    border-radius: 23%;
-        font-weight: bold !important;
-
-    */
     color: rgb(255, 37, 37);
     background-color: orange;
 }
 
 .form {
-    padding: 1rem; 
+    padding: 1rem;
     margin-top: 1rem;
-    margin-left: 1rem; 
-    margin-right:1rem;
-    border-radius: 5%; 
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 5%;
     background-attachment: rgb(211, 202, 202);
 
 }
