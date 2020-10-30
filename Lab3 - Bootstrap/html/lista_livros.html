@@ -170,13 +170,13 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="d-none d-xl-block">
-                                        <a href="visualizar.html"><img title="Visualizar"
+                                        <a href="./visualizar_livro.html"><img title="Visualizar"
                                                 src="../icones/acoes/eye-solid.svg"
                                                 class="btn btn-outline-primary btn-sm icone-acoes-view"></a>
-                                        <a href="visualizar.html"><img title="Editar"
+                                        <a href="./editar_livro.html"><img title="Editar"
                                                 src="../icones/acoes/pen-solid.svg"
                                                 class="btn btn-outline-warning btn-sm icone-acoes-view"></a>
-                                        <a href="visualizar.html"><img title="Apagar"
+                                        <a data-toggle="modal" data-target="#exampleModal"><img title="Apagar"
                                                 src="../icones/acoes/trash-alt-solid.svg"
                                                 class="btn btn-outline-danger btn-sm icone-acoes-view"></a>
                                     </span>
@@ -188,9 +188,10 @@
                                             Ações
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="acoesListar">
-                                            <a class="dropdown-item" href="visualizar.html">Visualizar</a>
-                                            <a class="dropdown-item" href="editar.html">Editar</a>
-                                            <a class="dropdown-item" href="apagar.html">Apagar</a>
+                                            <a class="dropdown-item" href="./visualizar_livro.html">Visualizar</a>
+                                            <a class="dropdown-item" href="./editar_livro.html">Editar</a>
+                                            <a class="dropdown-item" data-toggle="modal"
+                                                data-target="#exampleModal">Apagar</a>
                                         </div>
                                     </div>
                                 </td>
@@ -221,99 +222,121 @@
                     <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
                         data-target="#modal-form-livros">Cadastrar</button>
 
-                        <!-- Modal formulario livros -->
-                    <div class="modal fade" id="modal-form-livros" tabindex="-1" role="dialog"
-                        aria-labelledby="modal-form-livros-Title" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle"><span class="h2"
-                                            style="position: relative; left: 1rem;font-weight: bold;">Cadastrar
-                                            livro</span></h5>
-                                    <!--
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>-->
-                                </div>
-                                <div class="modal-body">
-                                    <form style="padding: 1rem;">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputNome">Nome</label>
-                                                <input type="text" class="form-control" id="inputNome" required>
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputIsbn">ISBN</label>
-                                                <input type="text" class="form-control" id="inputIsbn">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEditora">Editora</label>
-                                            <input type="text" class="form-control" id="inputEditora">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAutor">Autor</label>
-                                            <input type="text" class="form-control" id="inputAutor">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputPublicacao">Data de Publicação</label>
-                                            <input type="date" class="form-control" id="inputPublicacao">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAssunto">Assunto</label>
-                                            <textarea class="form-control" id="inputAssunto" rows="3"
-                                                placeholder="Digite uma descrição para o livro"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Disponivel para:</label>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio-disponivel"
-                                                    id="radio-compra" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Compra
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio-disponivel"
-                                                    id="radio-aluguel" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Aluguel
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Origem:</label>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio-origem"
-                                                    id="radio-nacional" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Nacional
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio-origem"
-                                                    id="radio-importado" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Importado
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputEstoque">Quantidade em estoque:</label>
-                                                <input type="number" class="form-control" id="inputEstoque">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-success">Cadastrar</button>
-                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal formulario livros -->
+    <div class="modal fade" id="modal-form-livros" tabindex="-1" role="dialog" aria-labelledby="modal-form-livros-Title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"><span class="h2"
+                            style="position: relative; left: 1rem;font-weight: bold;">Cadastrar
+                            livro</span></h5>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group border form" style="padding: 1rem;">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputNome">Nome</label>
+                                <input type="text" class="form-control" id="inputNome" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputIsbn">ISBN</label>
+                                <input type="text" class="form-control" id="inputIsbn">
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="inputEditora">Editora</label>
+                            <input type="text" class="form-control" id="inputEditora">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAutor">Autor</label>
+                            <input type="text" class="form-control" id="inputAutor">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPublicacao">Data de Publicação</label>
+                            <input type="date" class="form-control" id="inputPublicacao">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAssunto">Assunto</label>
+                            <textarea class="form-control" id="inputAssunto" rows="3"
+                                placeholder="Digite uma descrição para o livro"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Disponivel para:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio-disponivel" id="radio-compra"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Compra
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio-disponivel" id="radio-aluguel"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Aluguel
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Origem:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio-origem" id="radio-nacional"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Nacional
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio-origem" id="radio-importado"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Importado
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEstoque">Quantidade em estoque:</label>
+                                <input type="number" class="form-control" id="inputEstoque">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modal apagar livro -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja apagar?</h5>
+                    <!--
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    -->
+                </div>
+                <!--
+                <div class="modal-body">
+                    ...
+                </div>
+                -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                    <button type="button" class="btn btn-danger">Sim</button>
                 </div>
             </div>
         </div>

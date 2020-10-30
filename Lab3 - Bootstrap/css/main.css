@@ -78,3 +78,13 @@ body {
     color: rgb(255, 37, 37);
     background-color: orange;
 }
+
+.form {
+    padding: 1rem; 
+    margin-top: 1rem;
+    margin-left: 1rem; 
+    margin-right:1rem;
+    border-radius: 5%; 
+    background-attachment: rgb(211, 202, 202);
+
+}
