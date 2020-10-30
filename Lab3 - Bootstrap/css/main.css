@@ -85,5 +85,10 @@ body {
     margin-right: 1rem;
     border-radius: 5%;
     background-attachment: rgb(211, 202, 202);
+}
 
+.titulo-boas-vindas {
+    color: red;
+    position: relative;
+    top: 4.5rem;
 }
