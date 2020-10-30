@@ -104,7 +104,7 @@
         </nav>
         <div class="content p-1">
             <div class="list-group-item border" style="position:relative; left: 1rem;">
-                <div class="d-flex">
+                <div class="container" style="position: relative;right: 1.5rem;">
                     <div class="mr-auto p-2">
                         <p class="h1 d-none d-lg-block">Lista de Clientes</p>
                         <p class="h2 d-none d-md-block d-lg-none"><span style="color:black">Olá,
@@ -133,7 +133,7 @@
                             <div class="d-flex" style="margin-bottom: 1rem;">
                                 <form class="form-inline">
                                     <input class="form-control form-control-md" type="search"
-                                        placeholder="Digite nome, sobrenome ou email" aria-label="Search"
+                                        placeholder="Digite nome ou email" aria-label="Search"
                                         style="border-radius: 0% !important;">
                                     <button class="btn btn-success btn-sm" type="submit"
                                         style="border-radius: 0% !important;"><img
@@ -188,6 +188,26 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <nav aria-label="navegacao na lista de clientes">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Voltar">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Voltar</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Proximo">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Proximo</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
 
                     <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
                         data-target="#modal-form-clientes">Cadastrar</button>
