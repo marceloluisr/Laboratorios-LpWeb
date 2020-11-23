@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Questão 4 - Javascript DOM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend id="form-legend" style="font-size: large;background-color:yellowgreen"><strong>Lanchonete do
+                        IFMA</strong></legend>
+                <div class="form-content">
+                    <label for="nomeCliente"><strong>Nome do Cliente:</strong></label>
+                    <input type="text" id="nomeCliente" name="nomeCliente">
+                </div>
+                <div class="form-content">
+                    <label><strong>Bebidas:</strong></label><br><br>
+                    <label for="suco">Suco</label>
+                    <input type="checkbox" id="bebida1" name="bebida" value="Suco"><br>
+                    <label for="refrigerante">Refrigerante</label>
+                    <input type="checkbox" id="bebida2" name="bebida" value="Refrigerante"><br>
+                    <label for="agua">Água</label>
+                    <input type="checkbox" id="bebida3" name="bebida" value="Água"><br>
+                </div>
+                <div class="form-content">
+                    <label><strong>Doces e Salgados:</strong></label><br><br>
+                    <label for="bolo">Bolo</label>
+                    <input type="checkbox" id="doceEsalgado1" name="doceEsalgado" value="Bolo"><br>
+                    <label for="pastel">Pastel</label>
+                    <input type="checkbox" id="doceEsalgado2" name="doceEsalgado" value="Pastel"><br>
+                    <label for="torta">Torta</label>
+                    <input type="checkbox" id="doceEsalgado3" name="doceEsalgado" value="Torta"><br>
+                </div>
+
+                <input id="calc-btn" type="button" value="Calcular" onclick="calcular()">
+                <!--<input id="limpar" type="submit" value="Limpar">-->
+            </fieldset>
+        </form>
+
+        <div class="info-pedidos">
+            <input type="text" id="pedido-info" size="50">
+
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
