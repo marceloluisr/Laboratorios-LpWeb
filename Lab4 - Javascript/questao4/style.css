@@ -28,7 +28,7 @@ input#calc-btn {
 }
 
 
-input#limpar {
+input#limpar-btn {
     position: relative;
     left: 2rem;
     padding: 0.5rem;

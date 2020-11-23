@@ -56,3 +56,9 @@ function mostrarTela(pedido) {
     document.getElementById("pedido-info").value = JSON.stringify(pedido)
     
 }
+
+function limparTela() {
+    document.getElementsByName("nomeCliente").forEach(v => v.value = "")
+    document.getElementsByName("bebida").forEach(v => v.checked = false)
+    document.getElementsByName("doceEsalgado").forEach(v => v.checked = false)   
+}
