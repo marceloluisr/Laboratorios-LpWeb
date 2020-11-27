@@ -28,9 +28,6 @@ function calcValorTotal(pedido) {
     return valorTotal
 }
 
-
-
-
 function calcular() {
     let entradas = document.forms[0]
     
