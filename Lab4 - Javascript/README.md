@@ -22,7 +22,7 @@ Dica: além das funções createElement() e textContent você pode utilizar a fu
 document.write(). Exemplo: document.write("<tr align=center>\n");
 
 Questão 4)
-Desenvolva o formulário com as seguintes ações a serem implementadas:<br>
+Desenvolva o formulário com as seguintes ações a serem implementada.:<br>
 <b>Veja abaixo as funcionalidades:</b><br>
 Ao clicar no botão [Calcular] deve ser
 exibido (de maneira destacada na
