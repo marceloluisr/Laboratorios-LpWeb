@@ -1,4 +1,5 @@
-<h1></h1>
+<h1>Tarefas</h1>
+
 Questão 1) Escrever um programa em Javascript que leia o código do item pedido, a quantidade e calcule
 o valor a ser pago por aquele lanche. Considere que a cada execução somente será calculado
 um item.
@@ -22,7 +23,7 @@ document.write(). Exemplo: document.write("<tr align=center>\n");
 
 Questão 4)
 Desenvolva o formulário com as seguintes ações a serem implementadas:
-<h2><b>Funcionalidades</b><h2>
+<b>Veja abaixo as funcionalidades:</b>
 Ao clicar no botão [Calcular] deve ser
 exibido (de maneira destacada na
 mesa página) as informações de nome
