@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FretesApiApplication<fretes_api>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.marcelor.fretes_api.FretesApiApplication",
+            "projectName": "fretes_api",
+            "args": ""
+        }
+    ]
+}
