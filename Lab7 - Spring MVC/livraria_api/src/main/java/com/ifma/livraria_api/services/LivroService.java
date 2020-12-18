@@ -8,6 +8,8 @@ import com.ifma.livraria_api.models.Livro;
 import com.ifma.livraria_api.repository.LivroRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -39,6 +41,14 @@ public class LivroService {
     @Transactional
     public void removePelo(Long id) {
         livroRepository.deleteById(id);
+    }
+
+    public Page<Livro> buscarPor(String nome, Pageable paginacao) {
+        return livroRepository.findByNomeLivroContaining(nome, paginacao);
+    }
+
+    public Page<Livro> buscaCom(Pageable paginacao) {
+        return livroRepository.findAll(paginacao);
     }
 
 }

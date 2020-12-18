@@ -9,6 +9,10 @@ import com.ifma.livraria_api.models.Livro;
 import com.ifma.livraria_api.services.LivroService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,8 +21,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
+/*
+TODO Professor, para facilitar o CRUD de dados através do Postman. 
+     Segue o JSON do corpo da rquisição:
+{
+    "isbn": "<digite algo>",
+    "nomeLivro":"<digite algo>",
+    "editoraLivro":"<digite algo>",
+    "anoPublicacaoLivro":"<digite algo>",
+    "assunto":"<digite algo>"
+}
+*/
 
 @RestController
 @RequestMapping("/livros")
@@ -36,15 +52,16 @@ public class LivroController {
     }
 
     @GetMapping
-    public Iterable<Livro> lista(String nome) {
+    public Page<Livro> lista(@RequestParam(required = false) String nome,
+            @PageableDefault(sort = "nomeLivro", direction = Sort.Direction.ASC, page = 0, size = 5) Pageable paginacao) {
         if (nome == null) {
-            return livroService.todos();
+            return livroService.buscaCom(paginacao);
         } else {
-            return livroService.buscarPor(nome);
+            return livroService.buscarPor(nome, paginacao);
         }
+
     }
 
- 
     @GetMapping("/{id}")
     public ResponseEntity<Livro> buscaPor(@PathVariable Long id) {
         Optional<Livro> optional = livroService.buscarPor(id);
